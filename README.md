@@ -1,4 +1,4 @@
 # surajraut
 this is my first git repository
 <br>
-Author-Suraj Raut
+Author-Suraj (student)
