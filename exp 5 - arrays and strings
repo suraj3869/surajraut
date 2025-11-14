@@ -1,0 +1,39 @@
+import java.util.Arrays; 
+import java.util.Scanner; 
+ 
+public class SortExample { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+ 
+        // Sorting Integers 
+        System.out.print("Enter number of integers: "); 
+        int n = sc.nextInt(); 
+        int[] numbers = new int[n]; 
+         
+        System.out.println("Enter " + n + " integers:"); 
+        for (int i = 0; i < n; i++) { 
+            numbers[i] = sc.nextInt(); 
+        } 
+         
+
+ 
+        Arrays.sort(numbers); 
+        System.out.println("Sorted Integers: " + Arrays.toString(numbers)); 
+ 
+        // Sorting Names 
+        System.out.print("\nEnter number of names: "); 
+        int m = sc.nextInt(); 
+        sc.nextLine();  // consume newline 
+        String[] names = new String[m]; 
+         
+        System.out.println("Enter " + m + " names:"); 
+        for (int i = 0; i < m; i++) { 
+            names[i] = sc.nextLine(); 
+        } 
+         
+        Arrays.sort(names); 
+        System.out.println("Sorted Names: " + Arrays.toString(names)); 
+         
+        sc.close(); 
+    } 
+}
