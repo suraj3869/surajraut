@@ -1,0 +1,35 @@
+import java.awt.*; 
+import javax.swing.*; 
+ 
+public class GraphicsDemo extends JFrame { 
+ 
+    public GraphicsDemo() { 
+        setTitle("Graphics Demo"); 
+        setSize(500, 400); 
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); 
+ 
+ 
+        setVisible(true); 
+    } 
+ 
+    // Overriding paint method 
+    public void paint(Graphics g) { 
+        super.paint(g); 
+ 
+        // Draw a line 
+        g.drawLine(50, 50, 200, 50); 
+ 
+        // Draw a rectangle 
+        g.drawRect(50, 100, 150, 100); 
+ 
+        // Draw an oval 
+        g.drawOval(250, 100, 150, 100); 
+ 
+        // Draw a string (text) 
+        g.drawString("Hello Graphics in Java!", 150, 250); 
+    } 
+ 
+    public static void main(String[] args) { 
+        new GraphicsDemo(); 
+    } 
+} 
