@@ -1,0 +1,57 @@
+interface Shape { 
+
+ 
+    double area(); 
+    double perimeter(); 
+} 
+ 
+// Class implementing the Shape interface - Circle 
+class Circle implements Shape { 
+    double radius; 
+ 
+    Circle(double radius) { 
+        this.radius = radius; 
+    } 
+ 
+    public double area() { 
+        return Math.PI * radius * radius; 
+    } 
+ 
+    public double perimeter() { 
+        return 2 * Math.PI * radius; 
+    } 
+} 
+ 
+// Class implementing the Shape interface - Rectangle 
+class Rectangle implements Shape { 
+    double length, width; 
+ 
+    Rectangle(double length, double width) { 
+        this.length = length; 
+
+ 
+        this.width = width; 
+    } 
+ 
+    public double area() { 
+        return length * width; 
+    } 
+ 
+    public double perimeter() { 
+        return 2 * (length + width); 
+    } 
+} 
+ 
+// Main class 
+public class InterfaceDemo { 
+    public static void main(String[] args) { 
+        Shape c = new Circle(5); 
+        Shape r = new Rectangle(4, 6); 
+ 
+        System.out.println("Circle Area: " + c.area()); 
+        System.out.println("Circle Perimeter: " + c.perimeter()); 
+ 
+        System.out.println("Rectangle Area: " + r.area()); 
+        System.out.println("Rectangle Perimeter: " + r.perimeter()); 
+    } 
+} 
