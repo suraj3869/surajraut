@@ -1,0 +1,57 @@
+class OverloadDemo { 
+    int a, b; 
+ 
+    // Constructor Overloading 
+    OverloadDemo() { 
+        a = 0; 
+        b = 0; 
+    } 
+    OverloadDemo(int x) { 
+        a = x; 
+        b = 0; 
+    } 
+ 
+    OverloadDemo(int x, int y) { 
+        a = x; 
+        b = y; 
+    } 
+ 
+ 
+ 
+    // Method Overloading 
+    int add(int x, int y) { 
+        return x + y; 
+    } 
+ 
+    double add(double x, double y) { 
+        return x + y; 
+    } 
+ 
+    String add(String x, String y) { 
+        return x + " " + y; 
+    } 
+ 
+    void display() { 
+        System.out.println("a = " + a + ", b = " + b); 
+    } 
+} 
+public class OverloadingExample { 
+    public static void main(String[] args) { 
+        // Demonstrating Constructor Overloading 
+        OverloadDemo obj1 = new OverloadDemo(); 
+        OverloadDemo obj2 = new OverloadDemo(10); 
+        OverloadDemo obj3 = new OverloadDemo(10, 20); 
+ 
+        obj1.display(); 
+
+ 
+        obj2.display(); 
+        obj3.display(); 
+ 
+        // Demonstrating Method Overloading 
+        OverloadDemo obj = new OverloadDemo(); 
+        System.out.println("Sum of integers: " + obj.add(5, 10)); 
+        System.out.println("Sum of doubles: " + obj.add(5.5, 10.5)); 
+        System.out.println("Concatenation of strings: " + obj.add("Hello", "World")); 
+    } 
+} 
