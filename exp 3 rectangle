@@ -1,0 +1,64 @@
+import java.util.Scanner; 
+class Rectangle { 
+    double length; 
+    double width; 
+    double area; 
+    String colour; 
+    // Constructor 
+    Rectangle(double length, double width, String colour) { 
+        this.length = length; 
+        this.width = width; 
+        this.colour = colour; 
+        this.area = find_area(); // calculate area 
+    } 
+    // Method to get length 
+    double get_length() { 
+        return length; 
+    } 
+    // Method to get width 
+    double get_width() { 
+        return width; 
+    } 
+    // Method to get colour 
+    String get_colour() { 
+        return colour; 
+    } 
+    // Method to find area 
+
+ 
+    double find_area() { 
+        return length * width; 
+    } 
+    // Compare rectangles 
+    boolean isMatching(Rectangle r) { 
+        return (this.area == r.area && this.colour.equalsIgnoreCase(r.colour)); 
+    } 
+} 
+public class RectangleDemo { 
+    public static void main(String[] args) { 
+        Scanner sc = new Scanner(System.in); 
+        // First Rectangle 
+        System.out.println("Enter length, width and colour of first rectangle:"); 
+        double l1 = sc.nextDouble(); 
+        double w1 = sc.nextDouble(); 
+        sc.nextLine(); // consume newline 
+        String c1 = sc.nextLine(); 
+        Rectangle rect1 = new Rectangle(l1, w1, c1); 
+        // Second Rectangle 
+        System.out.println("Enter length, width and colour of second rectangle:"); 
+        double l2 = sc.nextDouble(); 
+        double w2 = sc.nextDouble(); 
+        sc.nextLine(); // consume newline 
+        String c2 = sc.nextLine(); 
+        Rectangle rect2 = new Rectangle(l2, w2, c2); 
+        // Display Result 
+ 
+ 
+        if (rect1.isMatching(rect2)) { 
+            System.out.println("Matching Rectangles"); 
+        } else { 
+            System.out.println("Non-matching Rectangles"); 
+        } 
+        sc.close(); 
+    } 
+} 
