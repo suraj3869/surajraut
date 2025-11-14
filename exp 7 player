@@ -1,0 +1,74 @@
+class Player { 
+    String name; 
+    int age; 
+    String team; 
+    Player(String name, int age, String team) { 
+        this.name = name; 
+        this.age = age; 
+        this.team = team; 
+    } 
+    void display() { 
+        System.out.println("Name: " + name); 
+        System.out.println("Age: " + age); 
+        System.out.println("Team: " + team); 
+    } 
+} 
+// Derived Class for Cricket Player 
+class Cricket_Player extends Player { 
+    String role; 
+ 
+ 
+ 
+    Cricket_Player(String name, int age, String team, String role) { 
+        super(name, age, team); 
+        this.role = role; 
+    } 
+    void display() { 
+        super.display(); 
+        System.out.println("Game: Cricket"); 
+        System.out.println("Role: " + role); 
+        System.out.println("-------------------------"); 
+    } 
+} 
+// Derived Class for Football Player 
+class Football_Player extends Player { 
+    String position; 
+    Football_Player(String name, int age, String team, String position) { 
+        super(name, age, team); 
+        this.position = position; 
+    } 
+    void display() { 
+        super.display(); 
+        System.out.println("Game: Football"); 
+        System.out.println("Position: " + position); 
+        System.out.println("-------------------------"); 
+    } 
+} 
+ 
+ 
+// Derived Class for Hockey Player 
+class Hockey_Player extends Player { 
+    String stickType; 
+    Hockey_Player(String name, int age, String team, String stickType) { 
+        super(name, age, team); 
+        this.stickType = stickType; 
+    } 
+    void display() { 
+        super.display(); 
+        System.out.println("Game: Hockey"); 
+        System.out.println("Stick Type: " + stickType); 
+        System.out.println("-------------------------"); 
+    } 
+} 
+// Main Class 
+public class PlayerInheritanceDemo { 
+    public static void main(String[] args) { 
+        Cricket_Player c1 = new Cricket_Player("Virat Kohli", 35, "India", "Batsman"); 
+        Football_Player f1 = new Football_Player("Lionel Messi", 37, "Argentina", "Forward"); 
+        Hockey_Player h1 = new Hockey_Player("Manpreet Singh", 33, "India", "Carbon Fiber 
+Stick"); 
+ 
+        c1.display(); 
+        f1.display(); 
+        h1.display(); 
+    } 
